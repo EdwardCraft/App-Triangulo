@@ -2,36 +2,40 @@
 <html>
 <head>
 	<title>App Triangulo</title>
+  <meta charset="UTF-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
 
 <div class="container">
+
 	 <div class="row">
     	<div class="col-sm"></div>
    		<div class="col-sm">
    			<div class="input-group">
-  				<input id="sideA" type="text" aria-label="First name" class="form-control" placeholder="lado uno">
+  				<input id="sideA" type="text" aria-label="First name" class="form-control" placeholder="lado A">
   				<input id="sideB" type="text" aria-label="Last name" class="form-control"
-  				placeholder="lado dos">
+  				placeholder="lado B">
   				<input id="sideC" type="text" aria-label="Last name" class="form-control"
-  				placeholder="lado tres">
+  				placeholder="lado C">
   				<button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="findTriangleType()">Button</button>
 			</div>
 		</div>
     	<div class="col-sm"></div>
   	</div>
-  	<div class="row">
-  		<div class="col-sm"></div>
-  		<div class="col-sm">
-  			<input type="text" class="form-control text-center" placeholder="Tipo Triangulo" aria-label="Username" aria-describedby="basic-addon1" disabled  >
-  		</div>
-  		<div class="col-sm"></div>
-  	</div>
+    <br>
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm">
+        <img id="triangleImg" src="https://image.flaticon.com/icons/png/512/3088/3088953.png" class="img-fluid" alt="Responsive image">
+        <h1 id="triangleType" class="text-center" style="text-transform:uppercase">?</h1>
+      </div>
+      <div class="col-sm"></div>
+    </div>
 </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/calcularTriangulo.js"></script>
+<script type="text/javascript" src="dist/js/calcularTriangulo.js"></script>
 </body>
 </html>

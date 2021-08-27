@@ -2,11 +2,12 @@
 let sideA = 0, sideB = 0, sideC = 0;
 
 
-
 function findTriangleType() {
+
 	sideA = parseInt(document.getElementById('sideA').value)
 	sideb = parseInt(document.getElementById('sideB').value)
 	sideC = parseInt(document.getElementById('sideC').value)
+	animationSet();
 
 	let [d, e, f] = [sideA, sideb, sideC].map(sideA => +sideA || 0).sort((sideA,sideb) => sideA-sideb);
 	let resultText = d + e <= f     ? "invalido"
@@ -22,6 +23,7 @@ function findTriangleType() {
     }else if(resultText == "isosceles"){
     	imgLink = 'https://image.flaticon.com/icons/png/512/2106/2106544.png';
     }else{
+    	resultText = 'Los datos son invalidos!'
     	imgLink = 'https://image.flaticon.com/icons/png/512/675/675564.png';
     }
 
@@ -31,4 +33,15 @@ function findTriangleType() {
 
     document.getElementById('triangleImg').src = imgLink;
     document.getElementById('triangleType').innerHTML = resultText;
+    document.getElementById('cardId').className  = 'card shadow p-3 mb-5 bg-white rounded animate__animated animate__tada ';
+    
+}
+
+
+function animationSet() {
+	let animation = document.getElementById('cardId');
+	animation.style.animation = 'none';
+	animation.offsetHeight;
+	animation.style.animation = null;
+
 }

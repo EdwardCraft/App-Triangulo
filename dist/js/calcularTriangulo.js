@@ -44,7 +44,7 @@ function findTriangleType() {
     document.getElementById('triangleType').innerHTML = resultText;
 
     //set the animation  the cardId element.
-    document.getElementById('cardId').className  = 'contentText shadow p-3 mb-5  rounded ' + animationType;
+    document.getElementById('cardId').className  = 'contentText shadow p-3 mb-5  rounded text-center ' + animationType;
     
 }
 

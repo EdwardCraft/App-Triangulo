@@ -18,7 +18,8 @@ function findTriangleType() {
                      
     //Depending  on the return value of getTriangleType()
     //we will set the corresponding img to display the user
-    var imgLink = "";                  
+    var imgLink = "";
+    var animationType = "animate__animated animate__flipInX";                  
     if(resultText == "equilatero"){
     	imgLink = 'https://image.flaticon.com/icons/png/512/2106/2106529.png'
     }else if(resultText == "escaleno"){
@@ -27,16 +28,23 @@ function findTriangleType() {
     	imgLink = 'https://image.flaticon.com/icons/png/512/2106/2106544.png';
     }else{
     	resultText = 'Los datos son invalidos!'
+    	animationType = 'animate__animated animate__tada ';
     	imgLink = 'https://image.flaticon.com/icons/png/512/675/675564.png';
     }
 
+
+    //Will empty the inputs after the get the TriangleType.
     document.getElementById('sideA').value = '';
     document.getElementById('sideB').value = '';
     document.getElementById('sideC').value = '';
 
+    //Set the img to the  triangleImg element.
     document.getElementById('triangleImg').src = imgLink;
+    //Set the text value to the triangleType element.
     document.getElementById('triangleType').innerHTML = resultText;
-    document.getElementById('cardId').className  = 'card shadow p-3 mb-5 bg-white rounded animate__animated animate__tada ';
+
+    //set the animation  the cardId element.
+    document.getElementById('cardId').className  = 'contentText shadow p-3 mb-5  rounded ' + animationType;
     
 }
 

@@ -27,7 +27,7 @@ function findTriangleType() {
     }else if(resultText == "isosceles"){
     	imgLink = 'https://image.flaticon.com/icons/png/512/2106/2106544.png';
     }else{
-    	resultText = 'Los datos son invalidos!'
+    	resultText = '¡Los datos son invalidos!'
     	animationType = 'animate__animated animate__tada ';
     	imgLink = 'https://image.flaticon.com/icons/png/512/675/675564.png';
     }
